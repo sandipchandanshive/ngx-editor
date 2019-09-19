@@ -261,30 +261,59 @@
   </div>
 </ng-template>
 
-<!-- font size template -->
-<ng-template #fontSizeTemplate>
-  <div class="ngxe-popover extra-gt1">
-    <form autocomplete="off">
-      <div class="form-group">
-        <label for="fontSize" class="small">Font Size</label>
-        <input type="text" class="form-control-sm" id="fontSize" name="fontSize" placeholder="Font size in px/rem"
-          [(ngModel)]="fontSize" required>
-      </div>
-      <button type="button" class="btn-primary btn-sm btn" (click)="setFontSize(fontSize)">Submit</button>
-    </form>
-  </div>
-</ng-template>
-
 <!-- font family/name template -->
 <ng-template #fontNameTemplate>
   <div class="ngxe-popover extra-gt1">
     <form autocomplete="off">
       <div class="form-group">
         <label for="fontSize" class="small">Font Size</label>
-        <input type="text" class="form-control-sm" id="fontSize" name="fontName" placeholder="Ex: 'Times New Roman', Times, serif"
-          [(ngModel)]="fontName" required>
+        <!-- <input type="text" class="form-control-sm" id="fontSize" name="fontName" placeholder="Ex: 'Times New Roman', Times, serif"
+          [(ngModel)]="fontName" required> -->
+
+          <select name="fontName" [(ngModel)]="fontName" (change) = "setFontName($event.target.value)">
+            <option>Agency FB</option>
+<option>Albertina</option>
+<option>Antiqua	</option>
+<option>Architect</option>
+<option>Arial</option>
+<option>BankFuturistic	</option>
+<option>BankGothic	</option>
+<option>Blackletter	</option>
+<option>Blagovest</option>
+<option>Calibri</option>
+<option>Comic Sans MS</option>
+<option>Consolas</option>
+<option>Courier	</option>
+<option>Cursive	</option>
+<option>Decorative</option>
+<option>Fantasy	</option>
+<option>Fraktur	</option>
+<option>Frosty	</option>
+<option>Garamond	</option>
+<option>Georgia	</option>
+<option>Helvetica	</option>
+<option>Impact</option>
+<option>Minion</option>
+<option>Modern</option>
+<option>Monospace</option>
+<option>Open Sans</option>
+<option>Palatino</option>
+<option>Perpetua</option>
+<option>Roman</option>
+<option>Sans-serif</option>
+<option>Serif</option>
+<option>Script</option>
+<option>Swiss</option>
+<option>Times</option>
+<option>Times New Roman</option>
+<option>Tw Cen MT</option>
+<option>Verdana</option>
+            
+          </select>
       </div>
-      <button type="button" class="btn-primary btn-sm btn" (click)="setFontName(fontName)">Submit</button>
+      <!-- <button type="button" class="btn-primary btn-sm btn" (click)="setFontName(fontName)">Submit</button> -->
     </form>
   </div>
 </ng-template>
+
+
